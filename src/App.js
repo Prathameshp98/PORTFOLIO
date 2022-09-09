@@ -1,10 +1,14 @@
+import React from 'react';
+
 import './App.css';
+import SidebarMain from './Components/Sidebar/SidebarMain';
+
 
 function App() {
   return (
-    <div className="App">
-      
-    </div>
+    <React.Fragment>
+      <SidebarMain />
+    </React.Fragment>
   );
 }
 
