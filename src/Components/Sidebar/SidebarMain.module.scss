@@ -13,8 +13,8 @@ $font: 'Montserrat', serif;
   }
   
   .navbar {
+    z-index: 10;
     width: 100%;
-    box-shadow: 0 1px 4px rgb(146 161 176 / 15%);
   }
   
   .nav_container {
@@ -32,7 +32,7 @@ $font: 'Montserrat', serif;
     list-style: none;
   }
   
-  .navbar .nav_container a {
+  .navbar .nav_container .item {
     text-decoration: none;
     color: #0e2431;
     font-family: $font;
@@ -41,8 +41,14 @@ $font: 'Montserrat', serif;
     padding: 0.7rem;
   }
   
-  .navbar .nav_container a:hover{
+  .navbar .nav_container .item:hover{
       font-weight: bolder;
+      background-color: #facf0f80;
+      border-radius: 5px;
+  }
+
+  .navbar .nav_container a:active {
+    text-decoration: underline;
   }
   
   .nav_container {
@@ -158,11 +164,15 @@ $font: 'Montserrat', serif;
   .social_links {
     display: flex;
     flex-direction: row;
-    gap: 20px;
+    gap: 6%;
     padding: 20px;
     align-items: center;
     justify-content: center;
     cursor: pointer;
+  }
+
+  .social_links a:hover {
+    transform: scale(1.1);
   }
 
   @media (min-width: 540px) and (max-width: 1150px) {
@@ -177,7 +187,7 @@ $font: 'Montserrat', serif;
         gap: 10px;
     }
     .social_links {
-        gap: 10px;
+        gap: 10%;
     }
     .navbar .profile .profile_picture {
         width: 50%;
@@ -200,7 +210,7 @@ $font: 'Montserrat', serif;
         gap: 10px;
     }
     .social_links {
-        gap: 10px;
+        gap: 10%;
     }
     .navbar .profile .profile_picture {
         width: 50%;
