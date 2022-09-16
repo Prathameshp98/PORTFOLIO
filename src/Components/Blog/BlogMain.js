@@ -1,6 +1,6 @@
 import React from "react";
 
-import styles from "./BlogMain.module.scss";
+// import styles from "./BlogMain.module.scss";
 
 const BlogMain = () => {
     return (
