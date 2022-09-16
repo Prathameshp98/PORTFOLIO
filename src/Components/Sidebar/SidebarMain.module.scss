@@ -46,10 +46,6 @@ $font: 'Montserrat', serif;
       background-color: #facf0f80;
       border-radius: 5px;
   }
-
-  .navbar .nav_container a:active {
-    text-decoration: underline;
-  }
   
   .nav_container {
     display: block;
@@ -183,7 +179,7 @@ $font: 'Montserrat', serif;
     .navbar .menu_items {
         transform: translate(0);
         width: 18%;
-        margin: 0 87% 0 0;
+        margin: 0 88% 0 0;
         gap: 10px;
     }
     .social_links {

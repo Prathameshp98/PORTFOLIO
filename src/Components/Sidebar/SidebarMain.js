@@ -1,6 +1,7 @@
 import React from "react";
 
 import styles from "./SidebarMain.module.scss"
+
 import profile from "../../assests/images/profile.png"
 import email from "../../assests/images/email.png"
 import github from "../../assests/images/github.png"
