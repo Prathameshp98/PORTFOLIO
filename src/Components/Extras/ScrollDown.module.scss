@@ -1,0 +1,35 @@
+
+.down_arrow {
+    width: 50px;
+    top: 90%;
+    left: 45%;
+    position: fixed;
+    opacity: 0.5;
+}
+
+.down_arrow.up_down{
+    -webkit-animation: mover 1s infinite  alternate;
+    animation: mover 1s infinite  alternate;
+}
+.down_arrow.up_down{
+    -webkit-animation: mover 1s infinite  alternate;
+    animation: mover 1s infinite  alternate;
+}
+@-webkit-keyframes mover {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-20px); }
+}
+@keyframes mover {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-20px); }
+}
+
+
+@media (min-width: 540px) {
+   
+    .down_arrow {
+        top: 90%;
+        left: 50%;
+    }
+
+}
