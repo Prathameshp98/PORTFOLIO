@@ -5,7 +5,7 @@ import React from "react";
 const BlogMain = () => {
     return (
         <React.Fragment>
-            
+            blog
         </React.Fragment>
     );
 }

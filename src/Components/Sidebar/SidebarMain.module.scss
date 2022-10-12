@@ -13,7 +13,8 @@ $font: 'Montserrat', serif;
   }
   
   .navbar {
-    z-index: 10;
+    position: absolute;
+    top: 0;
     width: 100%;
   }
   
