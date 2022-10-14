@@ -7,7 +7,9 @@ import email from "../../assests/images/email.png"
 import github from "../../assests/images/github.png"
 import linkedin from "../../assests/images/linkedin.png"
 
-const SidebarMain = () => {
+const SidebarMain = (props) => {
+
+    console.log(props.scroll)
 
     const emailHandler = () => {
         window.open('mailto:prathameshpatil@gmail.com');
