@@ -59,16 +59,30 @@ function App() {
 
   }
 
+  const scrollToSection = (elementRef) => {
+    console.log(elementRef)
+    let travelTo = 0
+    if(elementRef === "home"){ travelTo = position.home }
+    else if(elementRef === "skills"){ travelTo = position.skills }
+    else if(elementRef === "work"){ travelTo = position.work }
+    else if(elementRef === "blog"){ travelTo = position.blog }
+    else if(elementRef === "contact"){ travelTo = position.contact }
+    window.scrollTo({
+        top: travelTo,
+        behaviour: 'smooth'
+    })
+    
+  }
 
   return (
     <React.Fragment>
       <img className={styles.common_background} src={background} alt="common-background" />
-      <SidebarMain scroll={scroll} position={position} />
-      <HomeMain ref={home}/>
-      <SkillsMain updatePos={updatePos} ref={skills} />
-      <WorkMain updatePos={updatePos} ref={work} />
-      <BlogMain updatePos={updatePos} ref={blog} />
-      <ContactMain updatePos={updatePos} ref={contact}/>
+      <SidebarMain scroll={scroll} position={position} setElement={scrollToSection} />
+      <HomeMain id="home" ref={home}/>
+      <SkillsMain id="skills" updatePos={updatePos} ref={skills} />
+      <WorkMain id="work" updatePos={updatePos} ref={work} />
+      <BlogMain id="blog" updatePos={updatePos} ref={blog} />
+      <ContactMain id="contact" updatePos={updatePos} ref={contact}/>
       <ScrollDown />
     </React.Fragment>
   );

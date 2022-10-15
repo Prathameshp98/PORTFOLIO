@@ -7,15 +7,11 @@ import email from "../../assests/images/email.png"
 import github from "../../assests/images/github.png"
 import linkedin from "../../assests/images/linkedin.png"
 
-const SidebarMain = ({scroll, position}) => {
+const SidebarMain = ({scroll, position, setElement}) => {
 
-    // console.log(scroll)
-    console.log(position)
-    const home = useRef(null)
-    const skills = useRef(null)
-    const work = useRef(null)
-    const blog = useRef(null)
-    const contact = useRef(null)
+    // console.log(scroll) 
+    // console.log(position)
+
     const[isActive, setIsActive] = useState({
         home: true,
         skills: false,
@@ -42,11 +38,8 @@ const SidebarMain = ({scroll, position}) => {
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [scroll])
 
-    const scrollToSection = (elementRef) => {
-        window.scrollTo({
-            top: elementRef.current.offsetTop,
-            behaviour: 'smooth'
-        })
+    const clickHandler = (element) => {
+        setElement(element)
     }
 
     const emailHandler = () => {
@@ -69,11 +62,11 @@ const SidebarMain = ({scroll, position}) => {
                             <div className={styles.profile}>
                                 <img className={styles.profile_picture} src={profile} alt="profile-pic"/>
                             </div>
-                            <li onClick={() => scrollToSection(home)}><a id={styles.home} className={`${styles.item} `} href="..">Home</a></li>
-                            <li onClick={() => scrollToSection(skills)}><a id={styles.skills} className={styles.item} href="..">Skills</a></li>
-                            <li onClick={() => scrollToSection(work)}><a id={styles.work} className={styles.item} href="..">Work</a></li>
-                            <li onClick={() => scrollToSection(blog)}><a id={styles.blog} className={styles.item} href="..">Blog</a></li>
-                            <li onClick={() => scrollToSection(contact)}><a id={styles.contact} className={styles.item} href="..">Contact</a></li>
+                            <li><a onClick={() => clickHandler("home")} id={styles.home} className={`${styles.item} `} href="#/">Home</a></li>
+                            <li><a onClick={() => clickHandler("skills")} id={styles.skills} className={styles.item} href="#/">Skills</a></li>
+                            <li><a onClick={() => clickHandler("work")} id={styles.work} className={styles.item} href="#/">Work</a></li>
+                            <li><a onClick={() => clickHandler("blog")} id={styles.blog} className={styles.item} href="#/">Blog</a></li>
+                            <li><a onClick={() => clickHandler("contact")} id={styles.contact} className={styles.item} href="#/">Contact</a></li>
                             <li className={styles.last_item}></li>
                             <div className={styles.social_links}>
                                 <a href=".." onClick={emailHandler}>
