@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState, useEffect} from "react";
 
 import styles from "./SidebarMain.module.scss"
 
@@ -7,11 +7,40 @@ import email from "../../assests/images/email.png"
 import github from "../../assests/images/github.png"
 import linkedin from "../../assests/images/linkedin.png"
 
-const SidebarMain = () => {
+const SidebarMain = ({scroll, position}) => {
+
+    // console.log(scroll)
+    console.log(position)
+    const[isActive, setIsActive] = useState({
+        home: true,
+        skills: false,
+        work: false,
+        blog: false,
+        contact: false
+    })
+
+    useEffect(() => {
+
+        if(scroll < 400){
+            setIsActive({home: true, skills: false, work: false, blog: false, contact: false})
+        } else if (scroll < 1250){
+            setIsActive({home: false, skills: true, work: false, blog: false, contact: false})
+        } else if (scroll < 2000){
+            setIsActive({home: false, skills: false, work: true, blog: false, contact: false})
+        } else if (scroll < 2850){
+            setIsActive({home: false, skills: false, work: false, blog: true, contact: false})
+        } else {
+            setIsActive({home: false, skills: false, work: false, blog: false, contact: true})
+        }
+        // console.log(isActive)
+
+    }, [scroll])
 
     const emailHandler = () => {
         window.open('mailto:prathameshpatil@gmail.com');
     }
+
+    
 
     return (
         <React.Fragment>
@@ -28,7 +57,7 @@ const SidebarMain = () => {
                             <div className={styles.profile}>
                                 <img className={styles.profile_picture} src={profile} alt="profile-pic"/>
                             </div>
-                            <li><a id={styles.home} className={styles.item} href="..">Home</a></li>
+                            <li><a id={styles.home} className={`${styles.item} `} href="..">Home</a></li>
                             <li><a id={styles.skills} className={styles.item} href="..">Skills</a></li>
                             <li><a id={styles.work} className={styles.item} href="..">Work</a></li>
                             <li><a id={styles.blog} className={styles.item} href="..">Blog</a></li>

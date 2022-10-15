@@ -13,7 +13,7 @@ $font: 'Montserrat', serif;
   }
   
   .navbar {
-    position: absolute;
+    position: fixed;
     top: 0;
     width: 100%;
   }
@@ -46,6 +46,11 @@ $font: 'Montserrat', serif;
       font-weight: bolder;
       background-color: #facf0f80;
       border-radius: 5px;
+  }
+
+  .active{
+      font-weight: bolder;
+      color: #facf0f;
   }
   
   .nav_container {

@@ -1,6 +1,10 @@
+* {
+  user-select: none
+}
+
 .common_background {
   position: relative;
   height: 100vh;
-  width: 140%;
+  width: 100%;
   opacity: 0.4;
 }
