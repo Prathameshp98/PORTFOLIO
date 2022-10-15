@@ -2,11 +2,11 @@ import React from "react";
 
 import styles from './HomeMain.module.scss';
 
-const HomeMain = () => {
+const HomeMain = React.forwardRef((props, ref) => {
 
     return (
         <React.Fragment>
-            <div id="home" className={styles.home} >
+            <div ref={ref} id="home" className={styles.home} >
                 <h1 className={styles.heading} >HI, I'M <br/> PRATHAMESH PATIL</h1>
                 <h3 className={styles.sub_heading} >FullStack Web Developer</h3>
                 <p className={styles.description} >
@@ -18,6 +18,6 @@ const HomeMain = () => {
             </div>
         </React.Fragment>
     );
-}
+})
 
 export default HomeMain;

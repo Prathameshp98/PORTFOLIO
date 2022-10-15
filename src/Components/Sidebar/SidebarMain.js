@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from "react";
+import React, {useRef, useState, useEffect} from "react";
 
 import styles from "./SidebarMain.module.scss"
 
@@ -11,6 +11,11 @@ const SidebarMain = ({scroll, position}) => {
 
     // console.log(scroll)
     console.log(position)
+    const home = useRef(null)
+    const skills = useRef(null)
+    const work = useRef(null)
+    const blog = useRef(null)
+    const contact = useRef(null)
     const[isActive, setIsActive] = useState({
         home: true,
         skills: false,
@@ -37,11 +42,17 @@ const SidebarMain = ({scroll, position}) => {
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [scroll])
 
+    const scrollToSection = (elementRef) => {
+        window.scrollTo({
+            top: elementRef.current.offsetTop,
+            behaviour: 'smooth'
+        })
+    }
+
     const emailHandler = () => {
         window.open('mailto:prathameshpatil@gmail.com');
     }
 
-    
 
     return (
         <React.Fragment>
@@ -58,11 +69,11 @@ const SidebarMain = ({scroll, position}) => {
                             <div className={styles.profile}>
                                 <img className={styles.profile_picture} src={profile} alt="profile-pic"/>
                             </div>
-                            <li><a id={styles.home} className={`${styles.item} `} href="..">Home</a></li>
-                            <li><a id={styles.skills} className={styles.item} href="..">Skills</a></li>
-                            <li><a id={styles.work} className={styles.item} href="..">Work</a></li>
-                            <li><a id={styles.blog} className={styles.item} href="..">Blog</a></li>
-                            <li><a id={styles.contact} className={styles.item} href="..">Contact</a></li>
+                            <li onClick={() => scrollToSection(home)}><a id={styles.home} className={`${styles.item} `} href="..">Home</a></li>
+                            <li onClick={() => scrollToSection(skills)}><a id={styles.skills} className={styles.item} href="..">Skills</a></li>
+                            <li onClick={() => scrollToSection(work)}><a id={styles.work} className={styles.item} href="..">Work</a></li>
+                            <li onClick={() => scrollToSection(blog)}><a id={styles.blog} className={styles.item} href="..">Blog</a></li>
+                            <li onClick={() => scrollToSection(contact)}><a id={styles.contact} className={styles.item} href="..">Contact</a></li>
                             <li className={styles.last_item}></li>
                             <div className={styles.social_links}>
                                 <a href=".." onClick={emailHandler}>

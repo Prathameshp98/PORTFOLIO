@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react';
+import React, {useRef, useState, useEffect} from 'react';
 
 import styles from './App.module.scss';
 import background from './assests/images/background.svg'
@@ -12,6 +12,12 @@ import ScrollDown from './Components/Extras/SrollDown';
 
 function App() {
 
+  const home = useRef(null)
+  const skills = useRef(null)
+  const work = useRef(null)
+  const blog = useRef(null)
+  const contact = useRef(null)
+
   const[scroll, setScroll] = useState()
   const[position, setPosition] = useState({
     home: 0,
@@ -21,25 +27,13 @@ function App() {
     contact: 0
   })
 
-  // const[count, setState] = useState(0)
-  // useEffect(() => {
-  //   // Infinite loop!
-  //   setTimeout(() => {
-  //     console.log(count)
-  //     setState(count => count+1);
-  //   }, 2000)
-    
-  // });
-
   useEffect(() => {
-  
-    
+
       setTimeout(() => {
         window.onscroll = () => { 
         setScroll(Math.round(window.scrollY))
         }
       }, 1500)
-    
 
   }, [scroll])
 
@@ -70,11 +64,11 @@ function App() {
     <React.Fragment>
       <img className={styles.common_background} src={background} alt="common-background" />
       <SidebarMain scroll={scroll} position={position} />
-      <HomeMain />
-      <SkillsMain updatePos={updatePos} />
-      <WorkMain updatePos={updatePos} />
-      <BlogMain updatePos={updatePos} />
-      <ContactMain updatePos={updatePos} />
+      <HomeMain ref={home}/>
+      <SkillsMain updatePos={updatePos} ref={skills} />
+      <WorkMain updatePos={updatePos} ref={work} />
+      <BlogMain updatePos={updatePos} ref={blog} />
+      <ContactMain updatePos={updatePos} ref={contact}/>
       <ScrollDown />
     </React.Fragment>
   );
