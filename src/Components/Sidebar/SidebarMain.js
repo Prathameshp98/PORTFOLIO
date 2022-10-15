@@ -30,7 +30,7 @@ const SidebarMain = ({scroll, position, setElement}) => {
             setIsActive({home: false, skills: false, work: true, blog: false, contact: false})
         } else if (scroll < position.contact - 50){
             setIsActive({home: false, skills: false, work: false, blog: true, contact: false})
-        } else {
+        } else if (scroll >= position.contact - 50) {
             setIsActive({home: false, skills: false, work: false, blog: false, contact: true})
         }
         // console.log(isActive)
