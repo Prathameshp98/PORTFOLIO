@@ -31,7 +31,15 @@ function App() {
       setPosition((prev) => {
         return {...prev, work: pos.work}
       })
-    }
+    } else if(pos.hasOwnProperty("blog")){
+      setPosition((prev) => {
+        return {...prev, blog: pos.blog}
+      })
+    } else if(pos.hasOwnProperty("contact")){
+      setPosition((prev) => {
+        return {...prev, contact: pos.contact}
+      })
+    } 
 
   }
 
@@ -48,8 +56,8 @@ function App() {
       <HomeMain />
       <SkillsMain updatePos={updatePos} />
       <WorkMain updatePos={updatePos} />
-      <BlogMain />
-      <ContactMain />
+      <BlogMain updatePos={updatePos} />
+      <ContactMain updatePos={updatePos} />
       <ScrollDown />
     </React.Fragment>
   );

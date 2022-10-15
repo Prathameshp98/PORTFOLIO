@@ -7,6 +7,8 @@ const WorkMain = (props) => {
     const work = useRef(null)
     useEffect(() => {
         props.updatePos({work: work.current.offsetTop})
+
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [])
 
 

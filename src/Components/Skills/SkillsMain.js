@@ -7,6 +7,8 @@ const SkillsMain = (props) => {
     const skills = useRef(null)
     useEffect(() => {
         props.updatePos({skills: skills.current.offsetTop})
+
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [])
 
 
