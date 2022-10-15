@@ -13,21 +13,41 @@ import ScrollDown from './Components/Extras/SrollDown';
 function App() {
 
   const[scroll, setScroll] = useState()
+  const[position, setPosition] = useState({
+    home: 0,
+    skills: 0,
+    work: 0,
+    blog: 0,
+    contact: 0
+  })
+
+  const updatePos = (pos) => {
+
+    if(pos.hasOwnProperty("skills")){
+      setPosition((prev) => {
+        return {...prev, skills: pos.skills}
+      })
+    } else if(pos.hasOwnProperty("work")){
+      setPosition((prev) => {
+        return {...prev, work: pos.work}
+      })
+    }
+
+  }
 
   useEffect(() => {
-    window.onscroll = (e) => {
-      setScroll(Math.round(window.scrollY))
-    }
+      window.onscroll = () => {
+          setScroll(Math.round(window.scrollY))
+      }
   }, [scroll])
-
 
   return (
     <React.Fragment>
       <img className={styles.common_background} src={background} alt="common-background" />
-      <SidebarMain scroll={scroll} />
+      <SidebarMain scroll={scroll} position={position} />
       <HomeMain />
-      <SkillsMain />
-      <WorkMain />
+      <SkillsMain updatePos={updatePos} />
+      <WorkMain updatePos={updatePos} />
       <BlogMain />
       <ContactMain />
       <ScrollDown />
