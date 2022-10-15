@@ -60,7 +60,7 @@ function App() {
   }
 
   const scrollToSection = (elementRef) => {
-    console.log(elementRef)
+    
     let travelTo = 0
     if(elementRef === "home"){ travelTo = position.home }
     else if(elementRef === "skills"){ travelTo = position.skills }
@@ -71,7 +71,7 @@ function App() {
         top: travelTo,
         behaviour: 'smooth'
     })
-    
+
   }
 
   return (
