@@ -21,6 +21,28 @@ function App() {
     contact: 0
   })
 
+  // const[count, setState] = useState(0)
+  // useEffect(() => {
+  //   // Infinite loop!
+  //   setTimeout(() => {
+  //     console.log(count)
+  //     setState(count => count+1);
+  //   }, 2000)
+    
+  // });
+
+  useEffect(() => {
+  
+    
+      setTimeout(() => {
+        window.onscroll = () => { 
+        setScroll(Math.round(window.scrollY))
+        }
+      }, 1500)
+    
+
+  }, [scroll])
+
   const updatePos = (pos) => {
 
     if(pos.hasOwnProperty("skills")){
@@ -43,11 +65,6 @@ function App() {
 
   }
 
-  useEffect(() => {
-      window.onscroll = () => {
-          setScroll(Math.round(window.scrollY))
-      }
-  }, [scroll])
 
   return (
     <React.Fragment>

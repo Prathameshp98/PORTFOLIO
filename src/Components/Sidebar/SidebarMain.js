@@ -21,19 +21,20 @@ const SidebarMain = ({scroll, position}) => {
 
     useEffect(() => {
 
-        if(scroll < 400){
+        if(scroll < position.skills){
             setIsActive({home: true, skills: false, work: false, blog: false, contact: false})
-        } else if (scroll < 1250){
+        } else if (scroll < position.work){
             setIsActive({home: false, skills: true, work: false, blog: false, contact: false})
-        } else if (scroll < 2000){
+        } else if (scroll < position.blog){
             setIsActive({home: false, skills: false, work: true, blog: false, contact: false})
-        } else if (scroll < 2850){
+        } else if (scroll < position.contact){
             setIsActive({home: false, skills: false, work: false, blog: true, contact: false})
         } else {
             setIsActive({home: false, skills: false, work: false, blog: false, contact: true})
         }
         // console.log(isActive)
 
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [scroll])
 
     const emailHandler = () => {
