@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react';
+import React, {useRef, useState, useEffect} from 'react';
 
 import styles from './App.module.scss';
 import background from './assests/images/background.svg'
@@ -12,6 +12,12 @@ import ScrollDown from './Components/Extras/SrollDown';
 
 function App() {
 
+  const home = useRef(null)
+  const skills = useRef(null)
+  const work = useRef(null)
+  const blog = useRef(null)
+  const contact = useRef(null)
+
   const[scroll, setScroll] = useState()
   const[position, setPosition] = useState({
     home: 0,
@@ -20,6 +26,16 @@ function App() {
     blog: 0,
     contact: 0
   })
+
+  useEffect(() => {
+
+      setTimeout(() => {
+        window.onscroll = () => { 
+        setScroll(Math.round(window.scrollY))
+        }
+      }, 1500)
+
+  }, [scroll])
 
   const updatePos = (pos) => {
 
@@ -43,21 +59,30 @@ function App() {
 
   }
 
-  useEffect(() => {
-      window.onscroll = () => {
-          setScroll(Math.round(window.scrollY))
-      }
-  }, [scroll])
+  const scrollToSection = (elementRef) => {
+    console.log(elementRef)
+    let travelTo = 0
+    if(elementRef === "home"){ travelTo = position.home }
+    else if(elementRef === "skills"){ travelTo = position.skills }
+    else if(elementRef === "work"){ travelTo = position.work }
+    else if(elementRef === "blog"){ travelTo = position.blog }
+    else if(elementRef === "contact"){ travelTo = position.contact }
+    window.scrollTo({
+        top: travelTo,
+        behaviour: 'smooth'
+    })
+    
+  }
 
   return (
     <React.Fragment>
       <img className={styles.common_background} src={background} alt="common-background" />
-      <SidebarMain scroll={scroll} position={position} />
-      <HomeMain />
-      <SkillsMain updatePos={updatePos} />
-      <WorkMain updatePos={updatePos} />
-      <BlogMain updatePos={updatePos} />
-      <ContactMain updatePos={updatePos} />
+      <SidebarMain scroll={scroll} position={position} setElement={scrollToSection} />
+      <HomeMain id="home" ref={home}/>
+      <SkillsMain id="skills" updatePos={updatePos} ref={skills} />
+      <WorkMain id="work" updatePos={updatePos} ref={work} />
+      <BlogMain id="blog" updatePos={updatePos} ref={blog} />
+      <ContactMain id="contact" updatePos={updatePos} ref={contact}/>
       <ScrollDown />
     </React.Fragment>
   );

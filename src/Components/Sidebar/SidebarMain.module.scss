@@ -14,6 +14,7 @@ $font: 'Montserrat', serif;
   
   .navbar {
     position: fixed;
+    z-index: 1;
     top: 0;
     width: 100%;
   }
@@ -35,9 +36,7 @@ $font: 'Montserrat', serif;
   
   .navbar .nav_container .item {
     text-decoration: none;
-    color: #0e2431;
     font-family: $font;
-    font-weight: 500;
     font-size: 1.2rem;
     padding: 0.7rem;
   }
@@ -48,8 +47,13 @@ $font: 'Montserrat', serif;
       border-radius: 5px;
   }
 
+  .not_active {
+    font-weight: 500;
+    color: #0e2431;
+  }
+
   .active{
-      font-weight: bolder;
+      font-weight: 700;
       color: #facf0f;
   }
   
