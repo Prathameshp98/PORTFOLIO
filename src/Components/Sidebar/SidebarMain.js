@@ -2,7 +2,7 @@ import React, {useState, useEffect} from "react";
 
 import styles from "./SidebarMain.module.scss"
 
-import profile from "../../assests/images/profile.png"
+import profile from "../../assests/images/profile.webp"
 import email from "../../assests/images/email.png"
 import github from "../../assests/images/github.png"
 import linkedin from "../../assests/images/linkedin.png"
