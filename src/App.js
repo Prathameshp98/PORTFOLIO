@@ -2,13 +2,14 @@ import React, {useRef, useState, useEffect} from 'react';
 
 import styles from './App.module.scss';
 import background from './assests/images/background.svg'
-import SidebarMain from './Components/Sidebar/SidebarMain';
-import HomeMain from './Components/Home/HomeMain';
-import SkillsMain from './Components/Skills/SkillsMain';
-import WorkMain from './Components/Work/WorkMain';
-import BlogMain from './Components/Blog/BlogMain';
-import ContactMain from './Components/Contact/ContactMain';
-import ScrollDown from './Components/Extras/SrollDown';
+const SidebarMain = React.lazy(() => import('./Components/Sidebar/SidebarMain'))
+const HomeMain = React.lazy(() => import('./Components/Home/HomeMain'))
+const SkillsMain = React.lazy(() => import('./Components/Skills/SkillsMain'))
+const WorkMain = React.lazy(() => import('./Components/Work/WorkMain'))
+const BlogMain = React.lazy(() => import('./Components/Blog/BlogMain'))
+const ContactMain = React.lazy(() => import('./Components/Contact/ContactMain'))
+const ScrollDown = React.lazy(() => import('./Components/Extras/SrollDown'))
+
 
 function App() {
 
