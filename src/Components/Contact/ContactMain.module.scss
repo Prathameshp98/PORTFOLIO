@@ -52,8 +52,8 @@ $font_sub_heading: 'Pacifico', serif;
     }
 
     input, textarea {
-        border: 2px solid #f4f4f4;
-        background-color: #f4f4f4;
+        border: 2px solid rgb(227, 227, 227);
+        background-color: rgb(227, 227, 227);
         border-radius: 7px;
         caret-color: #000;
         text-indent: 5px;
@@ -117,6 +117,13 @@ $font_sub_heading: 'Pacifico', serif;
 
     .contact__header {
         margin: 0 20%;
+    }
+
+    .contact__input {
+        input, textarea {
+            border: 2px solid #f4f4f4;
+            background-color: #f4f4f4;
+        }
     }
 
     .contact__button {
