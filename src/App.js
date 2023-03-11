@@ -84,7 +84,7 @@ function App() {
       <WorkMain id="work" updatePos={updatePos} ref={work} />
       <BlogMain id="blog" updatePos={updatePos} ref={blog} />
       <ContactMain id="contact" updatePos={updatePos} ref={contact}/>
-      <ScrollDown />
+      <ScrollDown scroll={scroll} />
     </React.Fragment>
   );
 }

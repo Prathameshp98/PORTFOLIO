@@ -9,8 +9,8 @@ import linkedin from "../../assests/images/linkedin.png"
 
 const SidebarMain = ({scroll, position, setElement}) => {
 
-    // console.log(scroll) 
-    // console.log(position)
+    // console.log("scroll",scroll) 
+    // console.log("pos",position)
 
     const[isActive, setIsActive] = useState({
         home: true,

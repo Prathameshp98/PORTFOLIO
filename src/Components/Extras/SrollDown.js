@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 import styles from './ScrollDown.module.scss';
 import downArrow from '../../assests/images/down-arrow.png'
 
-const ScrollDown = () => {
+const ScrollDown = (props) => {
 
     const [isScrolling, setIsScrolling] = useState(true)
 
@@ -13,9 +13,12 @@ const ScrollDown = () => {
 
     useEffect(() => {
         setTimeout(() => {
+            // console.log(document.body.offsetHeight, props.scroll, window.outerHeight)
             setIsScrolling(false)
+            
         }, 3000)
 
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [isScrolling])
 
     return (

@@ -1,13 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pacifico:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
-.contact {
-    width: 60%;
-    margin: 5% 20% 10% 20%;
-    font-size: 24px;
-    line-height: 30px;
+$font_heading: 'Rubik', serif;
+$font_sub_heading: 'Pacifico', serif;
+
+.common_background {
+    position: absolute;
+    height: 110vh;
+    width: 100%;
+    opacity: 0.5;
 }
 
-.contact h1 {
-    font-size: 45px;
-    font-weight: 600;
-    margin-bottom: 30px;
+.contact {
+    position: absolute;
+    width: 85%;
+    height: 100vh;
+    padding: 30px;
+    z-index: 2;
+    border-radius: 10px;
+    font-family: $font_heading;
+    margin: 10% 0% 15% 0%;
+}
+
+.contact__inner {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-direction: column;
+    margin: 0 8%;
+}
+
+.contact__header {
+    font-size: 35px;
+    font-weight: 500;
+}
+
+.contact__form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.contact__input {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+
+    label {
+        font-size: 20px;
+        font-weight: 200;
+    }
+
+    input, textarea {
+        border: 2px solid #f4f4f4;
+        background-color: #f4f4f4;
+        border-radius: 7px;
+        caret-color: #000;
+        text-indent: 5px;
+        font-size: 17px;
+        font-weight: 100;
+    }
+
+    input:focus, textarea:focus {
+        border: 0.5px solid#facf0f;
+    }
+
+    input {
+        height: 40px;  
+    }   
+
+    textarea {
+        resize: none;
+        padding: 5px 0;
+    }
+
+    p {
+        height: 15px;
+        color: red;
+    }
+
+}
+
+.contact__button {
+    height: 40px;
+    border-radius: 7px;
+    border: none;
+    background-color: #facf0f;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.error {
+    border: 0.5px solid red !important;
+}
+.error:focus {
+    border: 0.5px solid red !important;
+}
+
+.copyright {
+    
+}
+
+@media (min-width: 450px){
+    .contact {
+        width: 60%;
+        height: 75vh;
+        border-radius: 10px;
+        margin: 8% 22.5% 10%;
+        background-color: #fff;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    }
+
+    .contact__form {
+        margin: 0 20%;
+    }
+
+    .contact__header {
+        margin: 0 20%;
+    }
+
+    .contact__button {
+        height: 45px;
+        width: 45%;
+        margin-left: 27.5%;
+    }
+
 }
