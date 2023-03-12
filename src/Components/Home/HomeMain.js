@@ -10,9 +10,9 @@ const HomeMain = React.forwardRef((props, ref) => {
                 <h1 className={styles.heading} >HI, I'M <br/> PRATHAMESH PATIL</h1>
                 <h3 className={styles.sub_heading} >FullStack Web Developer</h3>
                 <p className={styles.description} >
-                    I like to craft solid and scalable products with great user interface and user experience, and I love what i do.
+                    I love   creating robust, scalable solutions with excellent user interfaces and user experiences.
                     <br />
-                    View my <span className={styles.highlight}>Work</span>, <span className={styles.highlight}>Blog</span> and <span className={styles.highlight}>Contact Me</span> or send me an email at <span className={styles.highlight}>prathameshpatil2812@gmail.com</span>.
+                    You can view my <span className={styles.highlight}>Work</span>, follow my <span className={styles.highlight}>Blog</span> and <span className={styles.highlight}>get in Touch</span>with me or email me at <span className={styles.highlight}>prathameshpatil2812@gmail.com</span>.
                 </p>
                 <button className={styles.button}>Download Resume</button>
             </div>
