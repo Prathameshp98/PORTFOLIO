@@ -2,6 +2,10 @@
   user-select: none
 }
 
+body {
+  overflow-x: hidden;
+}
+
 .common_background {
   position: relative;
   height: 100vh;

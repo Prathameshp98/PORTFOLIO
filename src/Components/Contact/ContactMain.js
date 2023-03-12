@@ -63,11 +63,9 @@ const ContactMain = React.forwardRef(({updatePos}, ref) => {
                         </div>
                         <input className={styles.contact__button} type="button" value="Submit" onClick={formSubmitHandler} />
                     </form> 
-                </div> 
+                </div>     
             </div>
-            <div className={styles.copyright}>
-                <p>copyright </p>
-            </div>  
+            
         </React.Fragment>
     );
 })
