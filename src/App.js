@@ -8,6 +8,7 @@ const SkillsMain = React.lazy(() => import('./Components/Skills/SkillsMain'))
 const WorkMain = React.lazy(() => import('./Components/Work/WorkMain'))
 const BlogMain = React.lazy(() => import('./Components/Blog/BlogMain'))
 const ContactMain = React.lazy(() => import('./Components/Contact/ContactMain'))
+const Footer = React.lazy(() => import('./Components/Footer/Footer'))
 const ScrollDown = React.lazy(() => import('./Components/Extras/SrollDown'))
 
 
@@ -84,6 +85,7 @@ function App() {
       <WorkMain id="work" updatePos={updatePos} ref={work} />
       <BlogMain id="blog" updatePos={updatePos} ref={blog} />
       <ContactMain id="contact" updatePos={updatePos} ref={contact}/>
+      <Footer />
       <ScrollDown scroll={scroll} />
     </React.Fragment>
   );
