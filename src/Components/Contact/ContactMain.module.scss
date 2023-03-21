@@ -104,7 +104,7 @@ $font_sub_heading: 'Pacifico', serif;
 @media (min-width: 540px) and (max-width: 1200px){
     .contact {
         width: 65%;
-        height: 75vh;
+        height: fit-content;
         border-radius: 10px;
         margin: 8% 22.5% 10%;
         background-color: #fff;
@@ -128,7 +128,7 @@ $font_sub_heading: 'Pacifico', serif;
 @media (min-width: 1200px){
     .contact {
         width: 60%;
-        height: 75vh;
+        height: fit-content;
         border-radius: 10px;
         margin: 8% 22.5% 10%;
         background-color: #fff;
