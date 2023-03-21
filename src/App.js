@@ -2,6 +2,7 @@ import React, {useRef, useState, useEffect} from 'react';
 
 import styles from './App.module.scss';
 import background from './assests/images/background.svg'
+const Toast = React.lazy(() => import('./Components/Common/Toasts/Toast'))
 const SidebarMain = React.lazy(() => import('./Components/Sidebar/SidebarMain'))
 const HomeMain = React.lazy(() => import('./Components/Home/HomeMain'))
 const SkillsMain = React.lazy(() => import('./Components/Skills/SkillsMain'))
@@ -79,6 +80,7 @@ function App() {
   return (
     <React.Fragment>
       <img className={styles.common_background} src={background} alt="common-background" />
+      <Toast color={"#0AAF00"} />
       <SidebarMain scroll={scroll} position={position} setElement={scrollToSection} />
       <HomeMain id="home" ref={home}/>
       <SkillsMain id="skills" updatePos={updatePos} ref={skills} />

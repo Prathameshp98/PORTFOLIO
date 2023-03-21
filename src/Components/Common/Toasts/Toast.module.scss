@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pacifico:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+$font_heading: 'Rubik', serif;
+$font_sub_heading: 'Pacifico', serif;
+
+.toast__container {
+    position: fixed;
+    z-index: 100;
+    top: 10px;
+    right: 10px;
+    height: 40px;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    padding: 15px 30px 15px 20px;
+    border-radius: 5px;
+    background-color: #fff;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    
+    .information {
+        font-family: $font_heading;
+    }
+
+    .close {
+        cursor: pointer;
+        width: 15px;
+        height: 15px;
+        margin: -10px -25px 0 0;
+    }
+
+   
+}
