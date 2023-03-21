@@ -27,6 +27,28 @@ $font_sub_heading: 'Pacifico', serif;
         height: 15px;
         margin: -10px -25px 0 0;
     }
-
    
+}
+
+@media (max-width: 540px) {
+
+    .toast__container {
+        height: 30px;
+        gap: 10px;
+
+        .information {
+            h3 {
+                font-size: 15px;
+            }
+            P {
+                font-size: 12px;
+            }
+        }
+    
+        .logo {
+            width: 32px;
+            height: 32px;
+        }
+    }
+    
 }
