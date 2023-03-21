@@ -1,11 +1,13 @@
 import React, {useEffect, useState, useRef} from "react";
 
-import validator from "../../Utils/validation";
+import validator from "../../Utils/validation/validation";
+
+import contactApi from "../../Utils/api/contactApi";
 
 import background from '../../assests/images/background.svg'
 import styles from './ContactMain.module.scss'
 
-const ContactMain = React.forwardRef(({updatePos}, ref) => {
+const ContactMain = React.forwardRef(({updatePos, toastHandler}, ref) => {
 
     const name = useRef(null)
     const email = useRef(null)
@@ -30,11 +32,12 @@ const ContactMain = React.forwardRef(({updatePos}, ref) => {
         if(e.target.id === "message"){ setValidation(prev => { return { ...prev, message: validator.messageValidator(message.current.value) } }) }
     }
 
-    const formSubmitHandler = () => {
+    const formSubmitHandler = async() => {
         if(!validator.nameValidator(name.current.value) && !validator.emailValidator(email.current.value) && !validator.messageValidator(message.current.value)){
-            console.log("Response Sent")
+            const result = await contactApi.postUser(name.current.value, email.current.value, message.current.value)
+            toastHandler(result)
         } else {
-            console.log("Something went wrong")
+            toastHandler({status: 500, data: {message: "Invalid/Incomplete Inputs", data: { updatedAt: new Date() }}})
         }
         
     }

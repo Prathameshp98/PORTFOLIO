@@ -21,6 +21,11 @@ function App() {
   const blog = useRef(null)
   const contact = useRef(null)
 
+  const[toastData, setToastData] = useState({
+    code: null,
+    message: null,
+    timeStamp: null
+  })
   const[scroll, setScroll] = useState()
   const[position, setPosition] = useState({
     home: 0,
@@ -77,16 +82,26 @@ function App() {
 
   }
 
+  const toastHandler = (data) => {
+    console.log(data)
+    setToastData({
+      code: data?.status || data.response.status,
+      message: data?.data?.message || data.response.data.message,
+      timeStamp: data?.data?.data?.updatedAt || data.response.data.data.updatedAt
+    })
+    
+  }
+
   return (
     <React.Fragment>
       <img className={styles.common_background} src={background} alt="common-background" />
-      <Toast color={"#0AAF00"} />
+      {toastData.code && <Toast toastData={toastData} />}
       <SidebarMain scroll={scroll} position={position} setElement={scrollToSection} />
       <HomeMain id="home" ref={home}/>
       <SkillsMain id="skills" updatePos={updatePos} ref={skills} />
       <WorkMain id="work" updatePos={updatePos} ref={work} />
       <BlogMain id="blog" updatePos={updatePos} ref={blog} />
-      <ContactMain id="contact" updatePos={updatePos} ref={contact}/>
+      <ContactMain id="contact" updatePos={updatePos} ref={contact} toastHandler={toastHandler}/>
       <Footer />
       <ScrollDown scroll={scroll} />
     </React.Fragment>
