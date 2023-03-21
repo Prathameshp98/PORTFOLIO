@@ -1,13 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pacifico:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+$font_heading: 'Rubik', serif;
+$font_sub_heading: 'Pacifico', serif;
 
 .skills {
-    width: 60%;
-    margin: 5% 20% 10% 20%;
+    width: 80%;
+    margin: 5% 5% 25% 15%;
     font-size: 24px;
     line-height: 30px;
+    font-family: $font_heading;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 70px;
 }
 
-.skills h1 {
-    font-size: 45px;
-    font-weight: 600;
+h2 {
+    font-family: $font_sub_heading;
+    font-weight: 400;
     margin-bottom: 30px;
+}
+
+.top {
+    width: 100%;
+
+    p {
+        font-size: 18px;
+        line-height: 25px;
+        text-align: justify;
+        margin-bottom: 15px;
+    }
+}
+
+.bottom {
+    width: 100%;
+
+    .skill__cards {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+
+        .card {
+            width: fit-content;
+            background-color: #CCCCD9;
+            border-radius: 5px;
+            padding: 4px;
+            font-size: 20px;
+        }
+    }
+
 }

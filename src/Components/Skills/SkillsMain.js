@@ -13,10 +13,50 @@ const SkillsMain = React.forwardRef(({updatePos}, ref) => {
     return (
         <React.Fragment>
             <div ref={ref} className={styles.skills}>
-                <h1>Skills</h1>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Elementum pulvinar etiam non quam lacus suspendisse. Dolor magna eget est lorem ipsum dolor. Volutpat lacus laoreet non curabitur gravida arcu ac. Nunc id cursus metus aliquam eleifend mi in nulla posuere. Blandit massa enim nec dui nunc mattis. Commodo elit at imperdiet dui. Consequat interdum varius sit amet mattis vulputate enim nulla. Egestas integer eget aliquet nibh praesent tristique. Ac tortor dignissim convallis aenean et tortor at. Nulla pellentesque dignissim enim sit amet.
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                <div className={`${styles.top}`}>
+                    <h2>About Me</h2>
+                    <p>Since the beginning of my career as a web developer, I have built numerous websites and web applications and collaborated in a variety of spaces.</p>
+                    <p>I build successful responsive websites that are fast, simple to use, and adopt best practices. Front-end development, HTML, CSS, JS, ReactJs building small and medium web apps, custom plugins, features, animations, and coding interactive layouts are my main areas of expertise. I also have a lot of experience with Node and FastAPI for backend apps. You can see examples of my work in the Projects section.</p>
+                    <p>I'm interested in positions where I can contribute, learn, and grow. Please contact me if you have any good opportunities that match my experience.</p>
+                </div>
+                <div className={`${styles.bottom}`}>
+                    <h2>Skills</h2>
+                    <div className={`${styles.skill__cards}`}>
+                        <div className={`${styles.card}`}>
+                            <p>HTML</p>
+                        </div>
+                        <div className={`${styles.card}`}>
+                            <p>CSS</p>
+                        </div>
+                        <div className={`${styles.card}`}>
+                            <p>JavaScript</p>
+                        </div>
+                        <div className={`${styles.card}`}>
+                            <p>ReactJS</p>
+                        </div>
+                        <div className={`${styles.card}`}>
+                            <p>Redux</p>
+                        </div>
+                        <div className={`${styles.card}`}>
+                            <p>Express</p>
+                        </div>
+                        <div className={`${styles.card}`}>
+                            <p>FastAPI</p>
+                        </div>
+                        <div className={`${styles.card}`}>
+                            <p>Mongoose</p>
+                        </div>
+                        <div className={`${styles.card}`}>
+                            <p>SQL</p>
+                        </div>
+                        <div className={`${styles.card}`}>
+                            <p>Python</p>
+                        </div>
+                        <div className={`${styles.card}`}>
+                            <p>GIT</p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </React.Fragment>
     );
