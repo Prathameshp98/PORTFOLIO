@@ -1,13 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pacifico:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+$font_heading: 'Rubik', serif;
+$font_sub_heading: 'Pacifico', serif;
 
 .work {
-    width: 60%;
-    margin: 5% 20% 10% 20%;
-    font-size: 24px;
-    line-height: 30px;
+    width: 80%;
+    margin: 5% 5% 25% 15%;
 }
 
-.work h1 {
-    font-size: 45px;
-    font-weight: 600;
+.work hr {
+    height: 1px;
+    background-color: grey;
+    width: 25%;
+    margin: 0 30% 20%;
+}
+
+.work h2 {
+    font-family: $font_sub_heading;
+    font-size: 36px;
+    line-height: 30px;
+    font-weight: 400;
     margin-bottom: 30px;
 }
+
+.work__container {
+    display: flex;
+    flex-direction: column;
+    margin: 40px 0;
+    gap: 50px;
+}
+
+.work__card {
+    width: 90%;
+    height: fit-content;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    padding: 20px;
+    font-family: $font_heading;
+
+    .project__type {
+        color: #facf0f;
+        font-size: 18px;
+        font-weight: 500;
+        margin-bottom: 10px;
+    }
+
+    .project__name {
+        font-family: $font_heading;
+        font-weight: 500;
+    }
+
+    .project__description {
+        font-size: 22px;
+        line-height: 30px;
+    }
+
+    .project__tools {
+        margin: 20px 0;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 15px;
+
+        p {
+            color: darkgray;
+        }
+
+        
+    }
+
+    .project__button {
+        margin: 30px 0 20px;
+        display: flex;
+        gap: 20px;
+        svg {
+            cursor: pointer;
+            transition: transform .5s ease;
+        }
+
+        svg:hover {
+            transform: scale(1.25);
+        }
+
+    }
+}
+
