@@ -38,6 +38,7 @@ h2 {
 
         .link {
             text-decoration: underline;
+            cursor: pointer;
         }
 
         .link:hover {
@@ -105,7 +106,7 @@ h2 {
     .skills {
         width: 80%;
         margin: 5% 5% 25% 15%;
-        font-size: 28px;
+        font-size: 24px;
         flex-wrap: nowrap;
     }
 
@@ -113,8 +114,8 @@ h2 {
         width: 60%;
 
         p {
-            font-size: 25px;
-            line-height: 34px;
+            font-size: 20px;
+            line-height: 30px;
         }
     }
 
@@ -122,10 +123,10 @@ h2 {
         width: 40%;
 
         .skill__cards {
-            gap: 20px;
+            gap: 10px;
             .card {
-                font-size: 23px;
-                padding: 10px;
+                font-size: 20px;
+                padding: 9px;
             }
         }
     }
@@ -136,14 +137,14 @@ h2 {
     .skills {
         width: 80%;
         margin: 5% 5% 25% 15%;
-        font-size: 32px;
+        font-size: 30px;
         flex-wrap: nowrap;
     }
 
     .top {
         width: 60%;
         p {
-            font-size: 26px;
+            font-size: 24px;
             line-height: 40px;
         }
     }
@@ -153,7 +154,7 @@ h2 {
         .skill__cards {
             gap: 20px;
             .card {
-                font-size: 25px;
+                font-size: 23px;
                 padding: 10px 20px;
             }
         }

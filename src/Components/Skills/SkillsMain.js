@@ -9,6 +9,20 @@ const SkillsMain = React.forwardRef(({updatePos}, ref) => {
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [])
 
+    const moveToBottom = () => {
+        const scrollHeight = document.documentElement.scrollHeight - 100
+        window.scrollTo({
+            top: scrollHeight,
+            behavior: 'smooth',
+        });
+    }
+
+    const gotoLinkdin = () => {
+        window.open(
+            'https://www.linkedin.com/in/prathamesh-patil-988442197',
+            '_blank'
+          );
+    }
 
     return (
         <React.Fragment>
@@ -22,12 +36,12 @@ const SkillsMain = React.forwardRef(({updatePos}, ref) => {
                     <p>
                         I build successful responsive websites that are fast, simple to use, and adopt best practices.
                         <span className={`${styles.highlight}`}> Front-End development</span>, HTML, CSS, JS, ReactJs building small and medium web apps, custom plugins, features, animations, and coding interactive layouts are my main areas of expertise.
-                        I also have a lot of experience with Node and FastAPI for <span className={`${styles.highlight}`}>Backend</span> apps. You can see examples of my work in the <span className={`${styles.link}`}>Projects</span> section.
+                        I also have a lot of experience with Node and FastAPI for <span className={`${styles.highlight}`}>Backend</span> apps. You can see examples of my work in the Projects section.
                     </p>
                     <p>
                         I'm interested in <span className={`${styles.highlight}`}>Job</span> opportunities where I can contribute, learn, and grow. 
-                        Feel free to connect or follow me on <span className={`${styles.link}`}>Linkedin</span>.
-                        Please <span className={`${styles.link}`}>Contact</span> me if you have any good opportunities that match my experience.
+                        Feel free to connect or follow me on <span className={`${styles.link}`} onClick={gotoLinkdin}>Linkedin</span>.
+                        Please <span className={`${styles.link}`} onClick={moveToBottom}>Contact</span> me if you have any good opportunities that match my experience.
                     </p>
                 </div>
                 <div className={`${styles.bottom}`}>
