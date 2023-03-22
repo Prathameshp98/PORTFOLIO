@@ -8,7 +8,16 @@ body {
 
 .common_background {
   position: relative;
-  height: 100vh;
+  height: 70vh;
   width: 100%;
   opacity: 0.4;
+}
+
+@media (min-width: 540px) {
+    .common_background {
+        position: relative;
+        height: 100vh;
+        width: 100%;
+        opacity: 0.4;
+    }
 }
