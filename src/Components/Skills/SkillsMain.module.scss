@@ -12,7 +12,7 @@ $font_sub_heading: 'Pacifico', serif;
     font-family: $font_heading;
     display: flex;
     flex-wrap: wrap;
-    gap: 70px;
+    gap: 40px;
 }
 
 h2 {
@@ -29,7 +29,22 @@ h2 {
         line-height: 25px;
         text-align: justify;
         margin-bottom: 15px;
+
+        span {
+            font-weight: 700;
+            color: #6f6f6f;
+            
+        }
+
+        .link {
+            text-decoration: underline;
+        }
+
+        .link:hover {
+            color: #facf0f;
+        }
     }
+
 }
 
 .bottom {
@@ -46,7 +61,101 @@ h2 {
             border-radius: 5px;
             padding: 4px;
             font-size: 20px;
+            transition: transform .25s ease;
+        }
+
+        .card:hover {
+            transform: scale(1.1);
         }
     }
 
+}
+
+@media (min-width: 550px) and (max-width: 950px) {
+    .skills {
+        width: 73%;
+        margin: 5% 5% 25% 22%;
+        font-size: 26px;
+    }
+
+    .top {
+        p {
+            font-size: 20px;
+            line-height: 28px;
+        }
+    }
+}
+
+@media (min-width: 950px) and (max-width: 1149px) {
+    .skills {
+        width: 70%;
+        margin: 5% 5% 25% 22%;
+        font-size: 26px;
+    }
+
+    .top {
+        p {
+            font-size: 24px;
+            line-height: 30px;
+        }
+    }
+}
+
+@media (min-width: 1150px) and (max-width: 1600px) {
+    .skills {
+        width: 80%;
+        margin: 5% 5% 25% 15%;
+        font-size: 28px;
+        flex-wrap: nowrap;
+    }
+
+    .top {
+        width: 60%;
+
+        p {
+            font-size: 25px;
+            line-height: 34px;
+        }
+    }
+
+    .bottom {
+        width: 40%;
+
+        .skill__cards {
+            gap: 20px;
+            .card {
+                font-size: 23px;
+                padding: 10px;
+            }
+        }
+    }
+}
+
+@media (min-width: 1600px) {
+
+    .skills {
+        width: 80%;
+        margin: 5% 5% 25% 15%;
+        font-size: 32px;
+        flex-wrap: nowrap;
+    }
+
+    .top {
+        width: 60%;
+        p {
+            font-size: 26px;
+            line-height: 40px;
+        }
+    }
+
+    .bottom {
+        width: 40%;
+        .skill__cards {
+            gap: 20px;
+            .card {
+                font-size: 25px;
+                padding: 10px 20px;
+            }
+        }
+    }
 }

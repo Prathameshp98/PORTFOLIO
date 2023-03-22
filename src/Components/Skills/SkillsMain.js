@@ -15,9 +15,20 @@ const SkillsMain = React.forwardRef(({updatePos}, ref) => {
             <div ref={ref} className={styles.skills}>
                 <div className={`${styles.top}`}>
                     <h2>About Me</h2>
-                    <p>Since the beginning of my career as a web developer, I have built numerous websites and web applications and collaborated in a variety of spaces.</p>
-                    <p>I build successful responsive websites that are fast, simple to use, and adopt best practices. Front-end development, HTML, CSS, JS, ReactJs building small and medium web apps, custom plugins, features, animations, and coding interactive layouts are my main areas of expertise. I also have a lot of experience with Node and FastAPI for backend apps. You can see examples of my work in the Projects section.</p>
-                    <p>I'm interested in positions where I can contribute, learn, and grow. Please contact me if you have any good opportunities that match my experience.</p>
+                    <p>
+                        Since the beginning of my career as a <span className={`${styles.highlight}`}>Web Developer</span>,
+                        I have built numerous websites and web applications and collaborated in a variety of spaces.
+                    </p>
+                    <p>
+                        I build successful responsive websites that are fast, simple to use, and adopt best practices.
+                        <span className={`${styles.highlight}`}> Front-End development</span>, HTML, CSS, JS, ReactJs building small and medium web apps, custom plugins, features, animations, and coding interactive layouts are my main areas of expertise.
+                        I also have a lot of experience with Node and FastAPI for <span className={`${styles.highlight}`}>Backend</span> apps. You can see examples of my work in the <span className={`${styles.link}`}>Projects</span> section.
+                    </p>
+                    <p>
+                        I'm interested in <span className={`${styles.highlight}`}>Job</span> opportunities where I can contribute, learn, and grow. 
+                        Feel free to connect or follow me on <span className={`${styles.link}`}>Linkedin</span>.
+                        Please <span className={`${styles.link}`}>Contact</span> me if you have any good opportunities that match my experience.
+                    </p>
                 </div>
                 <div className={`${styles.bottom}`}>
                     <h2>Skills</h2>
@@ -36,6 +47,9 @@ const SkillsMain = React.forwardRef(({updatePos}, ref) => {
                         </div>
                         <div className={`${styles.card}`}>
                             <p>Redux</p>
+                        </div>
+                        <div className={`${styles.card}`}>
+                            <p>Node</p>
                         </div>
                         <div className={`${styles.card}`}>
                             <p>Express</p>
