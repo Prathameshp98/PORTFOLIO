@@ -17,6 +17,7 @@ $font_sub_heading: 'Pacifico', serif;
 }
 
 .work h2 {
+    text-align: left;
     font-family: $font_sub_heading;
     font-size: 36px;
     line-height: 30px;
@@ -130,6 +131,7 @@ $font_sub_heading: 'Pacifico', serif;
         }
     
         .project__name__desktop {
+            text-align: right;
             font-family: $font_heading;
             font-weight: 500;
             margin-bottom: 10px;
@@ -198,9 +200,7 @@ $font_sub_heading: 'Pacifico', serif;
         margin: 5% 20% 25% 20%;
     }
 
-    .work h2 {
-        text-align: center;
-    }
+    
 }
 
 @media (min-width: 1000px) {
@@ -215,6 +215,10 @@ $font_sub_heading: 'Pacifico', serif;
     .work {
         width: 70%;
         margin: 10% 20% 25% 20%;
+    }
+
+    .work h2 {
+        text-align: center;
     }
 }
 
