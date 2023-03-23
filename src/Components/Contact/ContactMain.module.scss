@@ -13,22 +13,22 @@ $font_sub_heading: 'Pacifico', serif;
 
 .contact {
     position: absolute;
-    width: 80%;
+    width: 90%;
     height: 60vh;
     padding: 30px;
-    z-index: 2;
+    z-index: 0;
     border-radius: 10px;
     font-family: $font_heading;
-    margin: 5% 0% 0% 0%;
+    margin: 5% 0;
 }
 
 .contact__inner {
-    width: 100%;
+    width: 90%;
     display: flex;
     justify-content: center;
     gap: 15px;
     flex-direction: column;
-    margin: 0 8%;
+    margin: 10% 5%;
 }
 
 .contact__header {
@@ -102,7 +102,7 @@ $font_sub_heading: 'Pacifico', serif;
 @media (min-width: 540px) {
     .common_background {
         position: absolute;
-        height: 110vh;
+        height: 150vh;
         width: 100%;
         opacity: 0.5;
     }
