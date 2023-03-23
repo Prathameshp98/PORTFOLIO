@@ -6,8 +6,8 @@ $font_sub_heading: 'Pacifico', serif;
 
 .common_background {
     position: absolute;
-    height: 70vh;
-    width: 100%;
+    height: 100vh;
+    width: 120%;
     opacity: 0.5;
 }
 
@@ -23,6 +23,7 @@ $font_sub_heading: 'Pacifico', serif;
 }
 
 .contact__inner {
+    width: 110%;
     display: flex;
     justify-content: center;
     gap: 15px;

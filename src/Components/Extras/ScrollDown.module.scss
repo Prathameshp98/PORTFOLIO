@@ -2,9 +2,10 @@
 .down_arrow {
     width: 50px;
     top: 90%;
-    left: 44%;
+    left: 35%;
     position: fixed;
     opacity: 0.3;
+    z-index: 200;
 }
 
 .down_arrow.up_down{

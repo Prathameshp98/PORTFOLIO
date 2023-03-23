@@ -17,6 +17,7 @@ $font_sub_heading: 'Pacifico', serif;
 }
 
 .work h2 {
+    width: 150%;
     text-align: left;
     font-family: $font_sub_heading;
     font-size: 36px;
@@ -33,7 +34,7 @@ $font_sub_heading: 'Pacifico', serif;
 }
 
 .work__card {
-    width: 90%;
+    width: 110%;
     height: fit-content;
     border-radius: 10px;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
@@ -193,11 +194,11 @@ $font_sub_heading: 'Pacifico', serif;
     left: 0px;
 }
 
-@media (min-width: 550px) {
+@media (min-width: 500px) {
     
     .work {
         width: 80%;
-        margin: 5% 20% 25% 20%;
+        margin: 5% 20% 25% 22%;
     }
 
     
