@@ -153,6 +153,7 @@ const WorkMain = React.forwardRef(({updatePos}, ref) => {
                     </>
                     
                 }
+                {width <= 550 && <hr />}
             </div>
         </React.Fragment>
     );
