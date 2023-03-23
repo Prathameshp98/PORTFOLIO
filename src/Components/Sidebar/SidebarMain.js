@@ -15,23 +15,23 @@ const SidebarMain = ({scroll, position, setElement}) => {
     const[isActive, setIsActive] = useState({
         home: true,
         skills: false,
+        project: false,
         work: false,
-        blog: false,
         contact: false
     })
 
     useEffect(() => {
 
         if(scroll < position.skills - 50){
-            setIsActive({home: true, skills: false, work: false, blog: false, contact: false})
+            setIsActive({home: true, skills: false, project: false, work: false, contact: false})
+        } else if (scroll < position.project - 150){
+            setIsActive({home: false, skills: true, project: false, work: false, contact: false})
         } else if (scroll < position.work - 50){
-            setIsActive({home: false, skills: true, work: false, blog: false, contact: false})
-        } else if (scroll < position.blog - 50){
-            setIsActive({home: false, skills: false, work: true, blog: false, contact: false})
+            setIsActive({home: false, skills: false, project: true, work: false, contact: false})
         } else if (scroll < position.contact - 50){
-            setIsActive({home: false, skills: false, work: false, blog: true, contact: false})
+            setIsActive({home: false, skills: false, project: false, work: true, contact: false})
         } else if (scroll >= position.contact - 50) {
-            setIsActive({home: false, skills: false, work: false, blog: false, contact: true})
+            setIsActive({home: false, skills: false, project: false, work: false, contact: true})
         }
         // console.log(isActive)
 
@@ -64,8 +64,8 @@ const SidebarMain = ({scroll, position, setElement}) => {
                             </div>
                             <li><a onClick={() => clickHandler("home")} id={styles.home} className={`${styles.item} ${isActive.home ? styles.active : styles.not_active}`} href="#/">Home</a></li>
                             <li><a onClick={() => clickHandler("skills")} id={styles.skills} className={`${styles.item} ${isActive.skills ? styles.active : styles.not_active}`} href="#/">Skills</a></li>
+                            <li><a onClick={() => clickHandler("project")} id={styles.project} className={`${styles.item} ${isActive.project ? styles.active : styles.not_active}`} href="#/">Projects</a></li>
                             <li><a onClick={() => clickHandler("work")} id={styles.work} className={`${styles.item} ${isActive.work ? styles.active : styles.not_active}`} href="#/">Work</a></li>
-                            <li><a onClick={() => clickHandler("blog")} id={styles.blog} className={`${styles.item} ${isActive.blog ? styles.active : styles.not_active}`} href="#/">Blog</a></li>
                             <li><a onClick={() => clickHandler("contact")} id={styles.contact} className={`${styles.item} ${isActive.contact ? styles.active : styles.not_active}`} href="#/">Contact</a></li>
                             <li className={styles.last_item}></li>
                             <div className={styles.social_links}>
