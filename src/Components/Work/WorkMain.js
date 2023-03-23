@@ -1,21 +1,79 @@
-import React, {useEffect} from "react";
+import React, {useEffect, useState} from "react";
 
 import styles from "./WorkMain.module.scss";
 
+import useWindowDimensions from "../../Utils/Window/window";
+
 const WorkMain = React.forwardRef(({updatePos}, ref) => {
+
+    const { width } = useWindowDimensions()
+
+    const[tab, setTab] = useState({
+        tab1: true,
+        tab2: false
+    })
 
     useEffect(() => {
         updatePos({work: ref.current.offsetTop -50})
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [])
 
+    const tabToggler = (element) => {
+        if(element === 'tab1'){
+            setTab({
+                tab1: true,
+                tab2: false
+            })
+        } else {
+            setTab({
+                tab1: false,
+                tab2: true
+            })
+        }
+        
+    }
+
     return (
         <React.Fragment>
             <div ref={ref} className={styles.work}>
-                <h1>Work</h1>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Elementum pulvinar etiam non quam lacus suspendisse. Dolor magna eget est lorem ipsum dolor. Volutpat lacus laoreet non curabitur gravida arcu ac. Nunc id cursus metus aliquam eleifend mi in nulla posuere. Blandit massa enim nec dui nunc mattis. Commodo elit at imperdiet dui. Consequat interdum varius sit amet mattis vulputate enim nulla. Egestas integer eget aliquet nibh praesent tristique. Ac tortor dignissim convallis aenean et tortor at. Nulla pellentesque dignissim enim sit amet.
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                <h2>Where I've Worked</h2>
+                {width <= 500 && 
+                    <div className={`${styles.work__tabs}`}>
+                        <div className={`${styles.tabs}`}>
+                            <div onClick={() => tabToggler("tab1")} className={`${styles.each__tab} ${tab.tab1 ? styles.active : ''}`}>
+                                <p>uFaber</p>
+                            </div>
+                            <div onClick={() => tabToggler("tab2")} className={`${styles.each__tab} ${tab.tab2 ? styles.active : ''}`}>
+                                <p>Accenture</p>
+                            </div>
+                        </div>
+                        <hr className={`${styles.hr}`}/>
+                        <div className={`${styles.content}`}>
+                            <div id="uFaber" className={`${styles.each__content}`} style={{display: tab.tab1 ? '' : 'none'}}>
+                                <div>
+                                    <h2>Software Developer <span>@uFaber</span></h2>
+                                    <p>May 2022 - Present</p>
+                                </div>
+                                <ul>
+                                    <li>Write modern, performant, maintainable code for a diverse array of clients and internal projects.</li>
+                                    <li>Worked on a variety of different languages, platforms, frameworks and content management systems such as HTML, CSS, JavaScript, Gatsby, Strapy, React, Node, Express and databases like MongoDB and MySQL</li>
+                                    <li>Created highly interactive web applications with responsive UI, proper SEO, error handling, and high performance.</li>
+                                </ul>
+                            </div>
+                            <div id="Accenture" className={`${styles.each__content}`} style={{display: tab.tab2 ? '' : 'none'}}>
+                                <div>
+                                    <h2>Associate SE <span>@Accenture</span></h2>
+                                    <p>Sept 2021 - Apr 2022</p>
+                                </div>
+                                <ul>
+                                    <li>Undergone SAP Plant Management (PM) P2P domain and SAP GUI Tool training.</li>
+                                    <li>Extensive participation in functional testing of SAP-based applications.</li>
+                                    <li>Communicate with multi-disciplinary teams of engineers, designers, producers, and clients on a daily basis.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                }
             </div>
         </React.Fragment>
     );
