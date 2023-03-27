@@ -76,6 +76,7 @@ $font_sub_heading: 'Pacifico', serif;
         display: flex;
         gap: 20px;
         svg {
+            color: black;
             cursor: pointer;
             transition: transform .5s ease;
         }
@@ -176,6 +177,7 @@ $font_sub_heading: 'Pacifico', serif;
             justify-content: flex-end;
             gap: 20px;
             svg {
+                color: black;
                 cursor: pointer;
                 transition: transform .5s ease;
             }
@@ -198,7 +200,7 @@ $font_sub_heading: 'Pacifico', serif;
     
     .project {
         width: 80%;
-        margin: 5% 20% 25% 22%;
+        margin: 5% 20% 25% 25%;
     }
 
     
@@ -207,15 +209,15 @@ $font_sub_heading: 'Pacifico', serif;
 @media (min-width: 1000px) {
     .project {
         width: 70%;
-        margin: 10% 20% 25% 25%;
+        margin: 10% 20% 15% 25%;
     }
     
 }
 
-@media (min-width: 1150px) {
+@media (min-width: 1151px) {
     .project {
         width: 70%;
-        margin: 10% 20% 25% 20%;
+        margin: 10% 20% 15% 20%;
     }
 
     .project h2 {
@@ -226,13 +228,13 @@ $font_sub_heading: 'Pacifico', serif;
 @media (min-width: 1500px) {
     .project {
         width: 70%;
-        margin: 0% 20% 25% 20%;
+        margin: 0% 20% 15% 20%;
     }
 }
 
 @media (min-width: 2000px) {
     .project {
         width: 60%;
-        margin: 0% 20% 25% 23%;
+        margin: 0% 20% 10% 23%;
     }
 }

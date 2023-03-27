@@ -7,7 +7,7 @@ $font_sub_heading: 'Pacifico', serif;
 .common_background {
     position: absolute;
     height: 100vh;
-    width: 100%;
+    width: 110%;
     opacity: 0.5;
 }
 
@@ -15,7 +15,7 @@ $font_sub_heading: 'Pacifico', serif;
     position: absolute;
     width: 95%;
     height: 60vh;
-    padding: 30px;
+    // padding: 30px;
     z-index: 0;
     border-radius: 10px;
     font-family: $font_heading;
@@ -28,7 +28,7 @@ $font_sub_heading: 'Pacifico', serif;
     justify-content: center;
     gap: 15px;
     flex-direction: column;
-    margin: 10% 0%;
+    margin: 10%;
 }
 
 .contact__header {
@@ -114,13 +114,14 @@ $font_sub_heading: 'Pacifico', serif;
         width: 65%;
         height: fit-content;
         border-radius: 10px;
-        margin: 8% 22.5% 10%;
+        margin: 8% 25% 10%;
         background-color: #fff;
         box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        padding: 30px;
     }
 
     .contact__inner {
-        margin: 0 5%;
+        margin: 0 7%;
     }
 
     .contact__form {
@@ -149,6 +150,7 @@ $font_sub_heading: 'Pacifico', serif;
         margin: 8% 22.5% 10%;
         background-color: #fff;
         box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        padding: 30px;
     }
 
     .contact__inner {
