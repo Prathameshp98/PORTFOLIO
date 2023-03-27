@@ -37,7 +37,7 @@ const WorkMain = React.forwardRef(({updatePos}, ref) => {
         <React.Fragment>
             <div ref={ref} className={styles.work}>
                 <h2>Where I've Worked</h2>
-                {width <= 500 && 
+                {width < 540 && 
                     <div className={`${styles.work__tabs}`}>
                         <div className={`${styles.tabs}`}>
                             <div onClick={() => tabToggler("tab1")} className={`${styles.each__tab} ${tab.tab1 ? styles.active : ''}`}>
