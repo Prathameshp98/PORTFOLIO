@@ -163,8 +163,8 @@ $font_sub_heading: 'Pacifico', serif;
             margin: 20px 0;
             display: flex;
             justify-content: flex-end;
-            flex-wrap: wrap;
-            gap: 15px;
+            flex-wrap: nowrap;
+            gap: 10px;
     
             p {
                 color: darkgray;
