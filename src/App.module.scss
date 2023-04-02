@@ -3,7 +3,9 @@
 }
 
 body {
-  overflow-x: hidden;
+  overflow: hidden;
+  overflow-y: auto;
+  width: 100%;
 }
 
 .common_background {
