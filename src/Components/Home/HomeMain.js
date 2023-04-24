@@ -5,7 +5,7 @@ import styles from './HomeMain.module.scss';
 const HomeMain = React.forwardRef((props, ref) => {
 
     const downloadHandler = async() => {
-        window.location.href = 'https://portfolioapp-prathameshpatil2812.b4a.run/download'
+        window.location.href = 'https://portfolioapp-prathameshpatil2812.b4a.run/downloads/get-resume'
     }
 
     return (
