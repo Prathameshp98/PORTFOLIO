@@ -1,0 +1,30 @@
+
+[
+    {
+        "type": "Featured Project",
+        "name": "Blog Club",
+        "description": "Write you throughts through this interactive and easy to use Blog application, which lets you right and see what others have wrote. Just Sign up and use.",
+        "tools" : ["NodeJS", "Express", "Mongoose", "JSX", "Auth", "SASS"],
+        "status": 0,
+        "live_link": "https://blogclub-prathameshpatil2812.b4a.run",
+        "github_link": "https://github.com/Prathameshp98/blog-club"
+    },
+    {
+        "type": "Featured Project",
+        "name": "Weather Reporter",
+        "description": "This application displayes detailed weather parameters of any location. It further consists of Goelocation services and featured sections. The app uses the public APIs provided by openWeather.",
+        "tools" : ["ReactJS", "Redux", "APIs", "JSX", "JavaScript", "CSS"],
+        "status": 1,
+        "live_link": "https://zesty-rolypoly-7fbc41.netlify.app",
+        "github_link": "https://github.com/Prathameshp98/Weather-App"
+    },
+    {
+        "type": "Featured Project",
+        "name": "The Business",
+        "description": "This is a fun game, similar to the business game we used to play in our childhood. Rules are simple and easy to understand in one go.",
+        "tools" : ["HTML", "CSS", "Bootstrap", "JavaScript", "jQuery"],
+        "status": 1,
+        "live_link": "https://grand-narwhal-943179.netlify.app",
+        "github_link": "https://github.com/Prathameshp98/BoardGame"
+    }
+]
